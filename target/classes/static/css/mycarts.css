@@ -1,0 +1,12 @@
+#mycarts {
+  padding: 100px 0px;
+}
+#mycarts .row {
+  text-align: center;
+  border: solid 2px;
+  border-radius: 30px;
+  background: #bbded6;
+  color: #204969;
+  font-size: 20px;
+  margin: 20px 0px;
+}

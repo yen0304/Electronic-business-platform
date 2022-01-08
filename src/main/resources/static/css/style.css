@@ -1,0 +1,26 @@
+#hot_product .header {
+    font-size: 20px;
+    margin: 10px 5px;
+}
+
+#hot-list .content {
+    margin: 5px;
+    padding: 0px;
+    border: 1px solid;
+    border-radius: 10px;
+    background: #fae3d9;
+}
+#hot-list .content .title {
+    font-size: 20px;
+    padding: 5px;
+    background: #ff502f;
+    border-radius: 10px;
+    color: #f2f4f6;
+}
+#hot-list .content .price {
+    font-size: 16px;
+    padding: 5px;
+}
+#hot-list .content a {
+    padding: 5px;
+}

@@ -20,7 +20,8 @@ public class ProductDaoImpl implements ProductDao{
 
     @Override
     public List<Product> findHostList() {
-        String sql="SELECT * FROM t_product where status=1 order by priority desc limit 0,3";
+        //https://www.fooish.com/sql/order-by.html DESC or ASC Sql語法排序
+        String sql="SELECT * FROM t_product where status=1 order by priority desc limit 0,4";
         Map<String,Object> map= new HashMap<>();
 
         List<Product> list =namedParameterJdbcTemplate.query(sql,map,new ProductRowMapper());

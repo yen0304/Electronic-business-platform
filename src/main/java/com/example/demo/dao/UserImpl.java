@@ -19,14 +19,14 @@ public class UserImpl implements UserDao{
     @Override
     public String CreateUser(User user) {
         String sql ="INSERT INTO t_user" +
-                "(username,password,updatepassword,gender,phone,email,avatar,is_delete,created_user,created_time,modified_user,modified_time,role ,enabled)" +
+                "(username,password,salt,gender,phone,email,avatar,is_delete,created_user,created_time,modified_user,modified_time)" +
                 "VALUE" +
-                "(:userName,:userPassword,:Updatepassword,:Gender,:Phone,:Email,:Avatar,:Is_delete,:Create_user,:Create_time,:Modified_user,:Modified_time,:Role ,:Enabled)";
+                "(:userName,:userPassword,:Salt,:Gender,:Phone,:Email,:Avatar,:Is_delete,:Create_user,:Create_time,:Modified_user,:Modified_time)";
 
         Map<String, Object> map =new HashMap<>();
         map.put("userName",user.getUsername());
         map.put("userPassword",user.getPassword());
-        map.put("Updatepassword",user.getUpdatepassword());
+        map.put("Salt",user.getSalt());
         map.put("Gender",user.getGender());
         map.put("Phone",user.getPhone());
         map.put("Email",user.getEmail());
@@ -36,8 +36,6 @@ public class UserImpl implements UserDao{
         map.put("Create_time",user.getCreated_time());
         map.put("Modified_user",user.getModified_user());
         map.put("Modified_time",user.getModified_time());
-        map.put("Role",user.getRole());
-        map.put("Enabled",user.getEnabled());
 
         namedParameterJdbcTemplate.update(sql,map);
         return ("註冊成功");

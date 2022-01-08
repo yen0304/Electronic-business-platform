@@ -23,14 +23,13 @@ public class ProductServiceImpl implements ProductService{
     public List<Product> getHostList() {
         List<Product> products = findHostList();
 
-        System.out.println(products);
         return products;
     }
 
     @Override
     public Product ReadById(Integer id) {
 
-        Product product=ReadById(id);
+        Product product=findById(id);
         if(product == null){
             throw new ProductNotFoundException("找不到商品數據");
         }
@@ -39,5 +38,9 @@ public class ProductServiceImpl implements ProductService{
 
     private List<Product> findHostList() {
         return productDao.findHostList();
+    }
+
+    private Product findById(Integer id){
+        return productDao.ReadById(id);
     }
 }

@@ -21,7 +21,6 @@ public class ProductRowMapper implements RowMapper<Product> {
         product.setNum(resultSet.getInt("num"));
         product.setStatus(resultSet.getInt("status"));
         product.setPriority(resultSet.getInt("priority"));
-
         product.setCreated_user(resultSet.getString("created_user"));
         product.setCreated_time(resultSet.getDate("created_time"));
         product.setModified_user(resultSet.getString("modified_user"));

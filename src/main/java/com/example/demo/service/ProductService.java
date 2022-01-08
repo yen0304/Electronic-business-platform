@@ -11,4 +11,5 @@ public interface ProductService {
 
     //查詢商品詳細數據
     Product ReadById(Integer id);
+
 }

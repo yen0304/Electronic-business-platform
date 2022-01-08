@@ -17,7 +17,7 @@ public class UserRowMapper implements RowMapper<User> {
         user.setUid(resultSet.getInt("uid"));
         user.setUsername(resultSet.getString("username"));
         user.setPassword(resultSet.getString("password"));
-        user.setUpdatepassword(resultSet.getString("updatepassword"));
+        user.setSalt(resultSet.getString("salt"));
         user.setGender(resultSet.getInt("gender"));
         user.setPhone(resultSet.getString("phone"));
         user.setEmail(resultSet.getString("email"));
@@ -28,8 +28,6 @@ public class UserRowMapper implements RowMapper<User> {
         user.setModified_user(resultSet.getString("modified_user"));
         user.setModified_time(resultSet.getTime("modified_time"));
 
-        user.setRole(resultSet.getString("role"));
-        user.setEnabled(resultSet.getInt("enabled"));
         return user;
     }
 }

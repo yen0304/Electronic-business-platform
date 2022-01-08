@@ -1,0 +1,32 @@
+* {
+  color: #204969;
+}
+
+#header {
+  height: 100px;
+  background: #fff7f7;
+  color: #08ffc8;
+}
+#header h1 {
+  padding: 10px 10px;
+}
+#header a {
+  text-decoration: none;
+  color: #204969;
+}
+
+#reg {
+  height: 700px;
+  padding: 100px 50px;
+  background: #dadada;
+}
+#reg button {
+  margin: 10px 5px;
+  font-size: 20px;
+  padding: 10px 5px;
+  color: #204969;
+}
+#reg .title {
+  font-size: 20px;
+  margin: 10px 5px;
+}
